@@ -1,0 +1,32 @@
+/* FOOTER */
+
+footer {
+    background-color: #242424;
+    margin-top: auto;
+}
+
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__list {
+    padding: 20px;
+}
+
+.footer__link {
+    padding: 0 16px;
+    font-size: 16px;
+    color: rgb(237, 6, 156);
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+}

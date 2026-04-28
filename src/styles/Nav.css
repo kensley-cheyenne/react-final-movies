@@ -1,0 +1,136 @@
+.h-nav__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(241, 236, 236);
+}
+
+.h-nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.h-nav__link {
+    display: flex;
+    align-items: center;
+}
+
+.h-web__title {
+    font-size: 18px;
+    color: #08b5ee;
+    margin-left: 10px;
+}
+
+.h-nav__logo {
+    width: 40px;
+    height: 40px;
+}
+
+.h-nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #08b5ee;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.h-nav__link:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(237, 6, 156);
+}
+
+.h-nav__link--primary {
+    border: 2px solid #08b5ee;
+    border-radius: 4px;
+}
+
+.h-nav__link--primary:hover {
+    background-color: rgb(237, 6, 156);
+    color: #08b5ee;
+    text-decoration-color: #08b5ee;
+}
+
+.h-btn__menu {
+    background-color: transparent;
+    font-size: 32px;
+    border: none;
+    color: #08b5ee;
+    cursor: pointer;
+    display: none;
+}
+
+.h-btn__menu:hover {
+    color: rgb(237, 6, 156);
+}
+
+.h-menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 300ms ease;
+    opacity: 0;
+    transform: translate(100%);
+}
+
+.h-menu--open {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+.h-menu--open .h-menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+}
+
+.h-menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.h-menu__list {
+    padding: 32px 0;
+}
+  
+.h-menu__link {
+    color: white;
+    font-size: 40px;
+}
+
+.h-menu__link:hover {
+    color: #08b5ee;
+    text-decoration: underline;
+}
+  
+.h-btn__menu--close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    color: white;
+}
+
+/* SMALL & LARGE PHONES */
+
+@media (max-width: 550px) {
+    .h-nav__link {
+        display: none;
+    }
+    .h-btn__menu {
+        display: block;
+    }
+}

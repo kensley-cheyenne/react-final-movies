@@ -1,0 +1,157 @@
+/* NAV BAR */
+
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.nav__left {
+    display: flex;
+    align-items: center;
+}
+
+.web__title {
+    font-size: 18px;
+    color: #08b5ee;
+    margin-left: 10px;
+}
+
+.nav__logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(237, 6, 156);
+}
+
+.nav__link--primary {
+    border: 2px solid #08b5ee;
+    border-radius: 4px;
+}
+
+.nav__link--primary:hover {
+    background-color: rgb(237, 6, 156);
+    color: #08b5ee;
+    text-decoration-color: #08b5ee;
+}
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 32px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.btn__menu:hover {
+    color: #08b5ee;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 300ms ease;
+    opacity: 0;
+    transform: translate(100%);
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.menu__list {
+    padding: 32px 0;
+}
+  
+.menu__link {
+    color: white;
+    font-size: 40px;
+}
+
+.menu__link:hover {
+    color: #08b5ee;
+    text-decoration: underline;
+}
+  
+.btn__menu--close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    color: white;
+}
+
+.overlay__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    background-image: url(https://offloadmedia.feverup.com/secretmiami.com/wp-content/uploads/2025/02/03001701/shutterstock_1284521104-2-1024x683.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    filter: grayscale(75%)
+}
+
+.overlay:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(62, 62, 64, 0.7);
+    pointer-events: none;
+}
