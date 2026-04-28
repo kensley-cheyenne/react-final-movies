@@ -125,7 +125,7 @@
 
 /* SMALL & LARGE PHONES */
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .h-nav__link {
         display: none;
     }

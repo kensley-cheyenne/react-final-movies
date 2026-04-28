@@ -40,6 +40,7 @@
 
 .movie__selected--title {
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .movie__selected--details {
@@ -88,7 +89,6 @@
 @media (max-width: 500px) {
   .movie__selected--img {
     width: 80%;
-
   }
   .movie__selected--info {
     font-size: 18px;

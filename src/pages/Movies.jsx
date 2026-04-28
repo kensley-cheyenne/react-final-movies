@@ -62,7 +62,7 @@ function Movies() {
             <div className="row">
               <div className="movies__header">
                 <h2 className="section__title movies__header--title">
-                  All <span className="blue">Movies</span>
+                  <span className="blue">Movie</span> choices
                 </h2>
                 <select id="filter" onChange={filterMovies}>
                   <option value="">Select filter</option>

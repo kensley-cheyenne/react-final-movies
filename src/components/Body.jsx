@@ -39,7 +39,7 @@ function Body() {
           <div className="h-row">
             <div className="home__header">
               <h2 className="section__title home__header--title">
-                Find your favorite <span className="blue">Movies</span>
+                Find the perfect <span className="blue">movie</span> for your next movie night!
               </h2>
             </div>
             <div className="home__landing">
