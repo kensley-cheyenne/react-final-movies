@@ -44,9 +44,11 @@
 
 .movie__selected--details {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 8px;
   font-style: italic;
+  line-height: 0.5;
 }
 
 .movie__selected--genre {
@@ -54,7 +56,7 @@
 }
 
 .movie__plot {
-  margin-top: 20%;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,4 +71,26 @@
 .movie__plot--para {
   margin-bottom: 16px;
   line-height: 1.5;
+}
+
+@media (max-width: 645px) {
+  .movie__selected {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movie__selected--info {
+    width: 100%;
+    padding: 20px 18px 0 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie__selected--img {
+    width: 80%;
+
+  }
+  .movie__selected--info {
+    font-size: 18px;
+  }
 }

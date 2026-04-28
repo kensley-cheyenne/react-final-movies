@@ -28,4 +28,12 @@
 .pink-cinema--img {
   width: 55vw;
   margin: 40px 40px;
+  padding-top: 40px;
+}
+
+@media (max-width: 550px) {
+  .pink-cinema--img {
+    width: 80vw;
+    margin: 20px 20px;
+  }
 }

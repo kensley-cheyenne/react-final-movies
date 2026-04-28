@@ -5,37 +5,26 @@ import { useState, useEffect } from "react";
 import NoMatches from "../assets/no-matches.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 
-// const Movies = () => {
-//   const [movies, setMovies] = useState([]);
-//   const [searchInput, setSearchInput] = useState("");
-
-//   async function getMovies(searchValue) {
-//     const { data } = await axios.get(
-//       `https://www.omdbapi.com/?apikey=d5c82cd3&s=${searchValue}`,
-//     );
-//     setMovies(data);
-//     console.log(data);
-//   }
-
-//   useEffect(() => {
-//     getMovies("");
-//   }, []);
-
-  function Movies() {
-    const [movies, setMovies] = useState([]);
-    const [searchInput, setSearchInput] = useState("");
+function Movies() {
+  const [movies, setMovies] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("search");
 
   useEffect(() => {
-    getMovies("");
+    if (query) {
+      getMovies(query);
+    }
   }, []);
 
   async function getMovies(searchValue) {
-      const response = await fetch(
-        `https://www.omdbapi.com/?apikey=d5c82cd3&s=${searchValue}`,
-      );
-      const data = await response.json();
-      setMovies(data.Search || []);
+    const response = await fetch(
+      `https://www.omdbapi.com/?apikey=d5c82cd3&s=${searchValue}`,
+    );
+    const data = await response.json();
+    setMovies(data.Search || []);
   }
 
   function filterMovies(event) {
@@ -146,5 +135,5 @@ import axios from "axios";
       <Footer />
     </>
   );
-};
+}
 export default Movies;
