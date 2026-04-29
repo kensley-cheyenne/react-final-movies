@@ -15,22 +15,7 @@ function Body() {
   };
 
   useEffect(() => {
-    // getMovies("");
   }, []);
-
-  // async function getMovies(searchValue) {
-  //     const response = await fetch(
-  //       `https://www.omdbapi.com/?apikey=d5c82cd3&s=${searchValue}`,
-  //     );
-  //     const data = await response.json();
-  //     setMovies(data.Search || []);
-  // }
-
-  // function handleSearch(event) {
-  //   const value = event.target.value;
-  //   setSearchInput(value);
-  //   getMovies(value);
-  // }
 
   return (
     <main>
